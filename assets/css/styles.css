@@ -1,0 +1,880 @@
+/* ----------------------------------- */
+/* Declarar Variables CSS */
+/* ----------------------------------- */
+:root {
+  /* Paleta de colores */
+  --color1: #0345bf;
+  /*Color del fondo del top bar*/
+  --color2: #ffffff;
+  /*Color del texto del top bar*/
+  --color3: #656565;
+  /*Color gris medio(para texto con fondo blanco)*/
+  --color4: #222222;
+  /*Color gris oscuro(para titulos)*/
+  --color5: #212529;
+  /*Color gris muy oscuro(para fondo)*/
+  --color6: #171717;
+  /*Color del fondo del pie de pagina*/
+  --color7: #999999;
+  /*Color del texto del pie de pagina*/
+  --color8: #e9ecef;
+  /*Color gris claro(para fondos)*/
+  --color9: #dee2e6;
+  /*Color subheading de los colaboradores*/
+  --color10: #ffffffcc;
+  /*X*/
+  --color11: #0345bfb3; 
+  /*Color azul con transparrencia para el efecto hover de las fotos del equipo*/
+  --color12: #333333; 
+  /*Color del borde de los recuadros del formulario*/
+
+  /* Tipografia */
+  --fuente-titulos: "Montserrat", sans-serif;
+  --fuente-Parrafos: "Open Sans", sans-serif;
+
+  /* Interlineado */
+  --spacing1: 1.8;
+}
+
+/* ----------------------------------- */
+/* Selector universal de elementos */
+/* ----------------------------------- */
+* {
+  /* Elimina los espacios predeterminados */
+  margin: 0;
+  padding: 0;
+
+  /* Evita que un contenedor cambie de tamaño al agregar espacios */
+  box-sizing: border-box;
+}
+
+/* ----------------------*/
+/* Selectores de tipo id */
+/* ----------------------*/
+
+#topbar {
+  background-color: var(--color6);
+  color: var(--color7);
+  font-size: 0.8rem;
+}
+
+#header {
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+#banner{
+  height:calc(100vh - 100px);
+  background-image:url("../img/bannergh.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:var(--color2);
+}
+
+#footer {
+  background-color: var(--color6);
+  color: var(--color7);
+}
+
+#muestra {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
+#concept {
+  background-color: var(--color5);
+  color: var(--color2);
+}
+
+#design {
+  background-color: var(--color4);
+  color: var(--color2);
+}
+
+#customers {
+  background-color: var(--color6);
+  color: var(--color2);
+}
+
+#blog {
+  color: var(--color4);
+  background-color: var(--color8);
+  text-align: justify;
+}
+
+#team {
+  background-color: var(--color5);
+  color: var(--color9);
+}
+
+#team h2 {
+  color: var(--color2);
+}
+
+#testimonios {
+  color: var(--color4);
+  background-color: var(--color2);
+  text-align: center;
+}
+
+#video-fondo {
+  background-color: var(--color8);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#proyectos{
+  color: #171717;
+  font-weight: bold;
+}
+
+/* ---------------------------- */
+/* Selectores de tipo etiqueta */
+/* ----------------------------*/
+
+/* Suaviza el salto del scroll vertical */
+html {
+  scroll-behavior: smooth;
+}
+
+/* aplicar estilos a los elementos de la pagina */
+body {
+  background-color: var(--color2);
+  color: var(--color3);
+  font-family: var(--fuente-Parrafos);
+  font-size: 15px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fuente-titulos);
+  font-size: 22px;
+  color: var(--color4);
+}
+
+h1{
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  color: var(--color2);
+}
+nav a {
+  font-family: var(--fuente-titulos);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Elimina los espacios que aparecen debajo del objeto imagen y video */
+img,
+video {
+  display: block;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+nav a {
+  color:var(--color2);
+  /*Color de la letra de el encabezado*/
+  text-decoration: none;
+  /* quita el subrayado */
+}
+
+/* ---------------------- */
+/* Selector de tipo class */
+/* -----------------------*/
+
+/* Padding extra pequeño */
+.padding-xs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Padding pequeño */
+.padding-s {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Padding extra grande */
+.padding-xl {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Ajustar el ancho del contenedor en pantalla */
+.container {
+  max-width: 70%;
+  margin: auto;
+}
+
+.containervideo {
+  max-width: 70%;
+  margin: auto;
+}
+
+/*Flex box barra de menu*/
+.flex-header {
+  background-color:var(--color1);
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  height:80px;
+}
+
+/* Responsive para imagenes */
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive para videos */
+.video-fluid {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.tbl-servicios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl-servicios th {
+  background-color: var(--color1);
+  color: var(--color2);
+  border: 1.5px solid var(--color6);
+  padding: 10px;
+}
+
+.tbl-servicios td {
+  border: 1px solid var(--color6);
+  padding: 7px;
+  color: var(--color5);
+  text-align: center;
+}
+
+.tbl-servicios tfoot td {
+  font-size: 0.7rem;
+  text-align: right;
+  font-style: italic;
+  font-weight: bold;
+  background-color: var(--color5);
+  color: var(--color2);
+}
+
+.tbl-servicios caption {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.firma {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/*flexbox galeria de proyectos*/
+.galeria-bloques {
+  text-align:center;
+  width:100%;
+  margin-bottom:50px;
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  padding:20px;
+  height:auto;
+
+}
+
+.item-trabajo {
+  width:100%;
+  margin:auto;
+  padding:20px;
+  text-align:left;
+  flex:0 1 30%;
+  transition:transform 0.3s ease,
+             box-shadow 0.3s ease;
+  cursor:pointer;
+  font-family:var(--fuente-titulos);
+}
+
+.item-trabajo p {
+  color: var(--color4);
+  font-family: var(--fuente-titulos);
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* flexbox Informacion acerca de nosotros */
+
+.contenedor-tarjetas {
+  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  width: 100%;
+  height: auto;
+
+}
+
+.tarjeta {
+  background: var(--color2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px var(--color6);
+  transition: transform 0.4s ease;
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.tarjeta:hover {
+  transform: translateY(-15px);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  order: -1;
+}
+
+.contenido-tarjeta {
+  padding: 50px;
+  color: var(--color5);
+}
+
+.contenido-tarjeta h3 {
+  margin-bottom: 10px;
+  color: var(--color4);
+  font-family: var(--fuente-titulos);
+}
+.contenido-tarjeta-equipo h3 {
+  margin: 10px;
+  color: var(--color4);
+  font-family: var(--fuente-Parrafos);
+}
+
+.item-trabajo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px;
+}
+
+.item-trabajo img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  height: auto;
+}
+.item-trabajo p {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.topbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-container a {
+  color: var(--color2);
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+
+.sticky-top {
+  /*Deja el elemento pegado cuando llegue a la posicion 0 de la parte superior de la ventana*/
+  position: sticky;
+  top: 0px;
+  /*Controla la profundidad de la caja, mientras mas alto sea el número, mas "encima" se mostrara la caja*/
+  z-index: 1000;
+}
+
+/*Clase para estilizar el formulario*/
+.form-control {
+  display: block;
+  /*Se trabajara como una caja*/
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 15px;
+  font: inherit; /*Hereda la fuente del body*/
+  
+  outline: none;
+  border-bottom: 1px solid var(--color6);
+}
+
+.form-link {
+  color: var(--color6);
+  text-decoration: none;
+}
+
+.form-submit {
+  background-color: var(--color1);
+  color: var(--color10);
+  padding: 6px 12px;
+  border: 1px;
+  font: inherit;
+  margin-top: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: var(--color4);
+}
+
+.form-control-noresize {
+  resize: none;
+}
+
+.footer-section {
+  padding: 100px 0 50px;
+  line-height: 1.6;
+}
+
+.footer-flexbox {
+  display:flex;
+  flex-wrap:wrap;
+  margin-left:-15px;
+  margin-right:-15px;
+}
+
+.footer-column {
+  max-width:25%;
+  flex-basis:25%;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.footer-column h2{
+  color:var(--color2);
+  font-family:var(--fuente-titulos);
+  font-size:22px;
+  margin-bottom:25px;
+  position:relative;
+}
+
+.footer-column h2::after{
+  content:"";
+  width:35px;
+  height:3px;
+  background-color:var(--color1);
+  position:absolute;
+  bottom:-8px;
+  left:0;
+}
+
+.footer-column p{
+  font-family:var(--fuente-Parrafos);
+  font-size:15px;
+  line-height:1.7;
+  color:var(--color7);
+}
+
+.footer-column a{
+  display:block;
+  text-decoration:none;
+  color:var(--color7);
+  margin-bottom:12px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.footer-column a:hover{
+  color:var(--color2);
+}
+
+/* Modificado para empujar el logo al fondo en la versión de escritorio */
+.footer-column-about {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.imagen-column-about{
+  width:120px;
+  margin-top: auto; /* Empuja el logo hacia abajo */
+  margin-bottom:30px;
+}
+
+.footer-column-send input{
+  width:100%;
+  background:transparent;
+  border:1px solid var(--color12);
+  color:var(--color2);
+  padding:10px;
+  margin-bottom:15px;
+}
+
+.footer-column-send button{
+  width:100%;
+  background-color:var(--color1);
+  color:var(--color2);
+  border:none;
+  padding:12px;
+  cursor:pointer;
+  text-transform:uppercase;
+}
+
+.footer-column-send button:hover{
+  background-color:var(--color4);
+}
+
+.footercopy-line {
+  border-top:1px solid var(--color12);
+}
+
+.footercopy-flexbox{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-top:45px;
+  flex-wrap:wrap;
+}
+
+.footercopy-column{
+  font-family: var(--fuente-Parrafos);
+  font-size: 14px;
+}
+
+.footercopy-column a{
+  color:var(--color7);
+  text-decoration:none;
+  margin-left:15px;
+}
+
+.footercopy-column a:hover{
+  color:var(--color2);
+}
+
+.scroll-up {
+  display: none; /* Añadido para que inicie oculto */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background-color: var(--color1);
+  color: var(--color2);
+  border: none;
+}
+
+.scroll-up:hover {
+  background-color: var(--color11);
+  border: none;
+  color: var(--color2);
+}
+
+/* Sección principal del título de página. Permite mostrar una imagen de fondo centrada,
+alinear el contenido al centro y controlar la apariencia visual del banner */
+.page-title {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color2);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url("../img/exteriores.jpg");
+}
+
+/* Capa superpuesta con degradado oscuro para mejorar la visibilidad del texto */
+.page-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+}
+
+/* Contenedor del texto principal. Se coloca encima del degradado */
+.page-title-content {
+  position: relative;
+  z-index: 1;
+}
+/* Estilo del título principal */
+.page-title-content h2 {
+  font-size: 2.5rem !important;
+  margin-bottom: 10px;
+}
+
+/* Estilo del texto descriptivo */
+.page-title-content p {
+  font-size: 1.1rem;
+}
+
+/*Contenido tarjeta equipo*/
+
+.tarjeta-equipo {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.imagen-equipo {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.imagen-equipo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imagen-equipo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color11);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tarjeta-equipo:hover .imagen-equipo::after {
+  opacity: 1;
+}
+
+.contenido-equipo {
+  background: var(--color2);
+  width: 85%;
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px var(--color6);
+}
+
+/* Textos dentro del recuadro */
+.contenido-equipo h3 {
+  margin: 0 0 10px 0;
+  color: var(--color4);
+  font-family: var(--fuente-Parrafos);
+  font-size: 15px;
+}
+
+.contenido-equipo p {
+  margin: 0;
+  color: var(--color5);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.col {
+  flex: 1;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.testimonio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: var(--color6);
+  gap: 25px;
+}
+
+
+/* ---------------------------------------------------------
+  ESTILOS BASE DE LA BARRA DE NAVEGACION EN PANTALLAS DE ESCRITORIO
+  ---------------------------------------------------------*/
+  .nav-bar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+  }
+
+.nav-logo {
+  width: 149px;
+  display:flex;
+  align-items:center;
+}
+
+.nav-logo img{
+  height:100px;
+  width:auto;
+}
+
+.nav-menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+
+  /* Ocultar el boton temporalmente*/
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-nav-link {
+  display: inline-block;
+  /*Trata cada enlaze como una caja*/
+  color: var(--color10);
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.main-nav-link:hover {
+  color: var(--color2);
+}
+
+.main-nav-link-active {
+  color: var(--color2);
+}
+
+/* ---------------------------------------------------------
+  DISEÑO RESPONSIVE PARA TABLET (TABLETAS EN POSICION VERTICAL)
+  ----------------------------------------------------------
+
+ 2. TABLET (Ancho máximo: 992px) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 95%;
+  }
+  .flex-header {
+    justify-content: space-between;
+  }
+  /* Hacemos que las tarjetas ocupen 2 columnas en lugar de 3 */
+  .tarjeta, .item-trabajo {
+    flex: 1 1 45%; 
+  }
+}
+
+/* 3. MÓVIL REGULAR - MENÚ HAMBURGUESA (Ancho máximo: 768px) */
+@media (max-width: 768px) {
+  /* Invertir el topbar para que el contacto quede arriba y redes abajo */
+  .topbar-container {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  /* Centrar el logo en móvil correctamente sin errores de anidamiento */
+  .imagen-column-about {
+    margin: 0 auto 30px auto; 
+  }
+
+  /* --- LÓGICA DEL MENÚ HAMBURGUESA --- */
+  /* Mostramos el ícono del menú */
+  .nav-menu-toggle {
+    display: block;
+    color: var(--color2);
+  }
+
+  /* Transformamos el menú horizontal en un menú vertical flotante */
+  .main-nav {
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Justo debajo del header */
+    left: 0;
+    width: 100%; /* Que ocupe todo el ancho de la pantalla */
+    background-color: var(--color4); /* Fondo azul para mantener identidad */
+    padding: 0;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.5);
+    z-index: 1000;
+
+    /* Estado inicial: Oculto y ligeramente desplazado hacia arriba */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .main-nav-link {
+    border-radius: 0;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--color6);
+  }
+
+  /* Clase que agregará JavaScript para mostrar el menú */
+  .main-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  /* ----------------------------------- */
+
+  /* Ajuste de tarjetas a 1 sola columna para celulares */
+  .tarjeta, .item-trabajo, .tarjeta-equipo {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  /* Ajuste del Footer a 1 sola columna centrada */
+  .footer-flexbox {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-column h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footercopy-flexbox {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/*----------------------------------------------------------
+    DISEÑO RESPONSIVE PARA CELULAR PEQUEÑO (POSICION VERTICAL)
+    ----------------------------------------------------------*/
+
+@media(max-width: 480px) {
+  .nav-logo img {
+    height: 70px; /* Logo un poco más chico para no saturar la barra */
+  }
+  h1 {
+    font-size: 28px; /* Achicamos un poco el título del banner principal */
+  }
+}
