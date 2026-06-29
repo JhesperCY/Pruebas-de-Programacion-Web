@@ -878,23 +878,3 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
     font-size: 28px; /* Achicamos un poco el título del banner principal */
   }
 }
-
-/* Estilos para el estimador */
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--color4);
-}
-
-#resultado {
-    padding: 15px;
-    border-radius: 8px;
-    background-color: var(--color2); /* Color de fondo del demo */
-    display: none; /* Se muestra solo al realizar el cálculo */
-}
