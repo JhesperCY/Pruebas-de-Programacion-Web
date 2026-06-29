@@ -43,4 +43,51 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+    function calcularPresupuesto() {
+    const m2 = document.getElementById("metros").value;
+    const material = document.getElementById("material").value;
+    const pisos = document.getElementById("pisos").value;
+    const divResultado = document.getElementById("resultado");
+
+    // 2. Validación básica [10]
+    if (m2 <= 0 || m2 === "") {
+        alert("Por favor, ingrese una cantidad válida de metros cuadrados.");
+        return;
+    }
+
+    let costoBaseM2;
+    
+    switch (material) {
+        case "economico":
+            costoBaseM2 = 500;
+            break;
+        case "premium":
+            costoBaseM2 = 900;
+            break;
+        case "sostenible":
+            costoBaseM2 = 750;
+            break;
+        default:
+            costoBaseM2 = 500;
+    }
+
+    const total = m2 * costoBaseM2 * pisos;
+
+    // 5. Mostrar resultado en el HTML [11]
+    divResultado.style.display = "block";
+    divResultado.innerHTML = `
+        <p>Análisis de Presupuesto:</p>
+        <ul>
+            <li>Costo por m²: $${costoBaseM2}</li>
+            <li>Área total: ${m2} m²</li>
+            <li>Pisos: ${pisos}</li>
+        </ul>
+        <hr>
+        <h3>Total Estimado: $${total.toLocaleString()}</h3>
+        <small>*Precios referenciales sujetos a evaluación técnica.</small>
+    `;
+    
+    console.log("Cálculo realizado: ", total); // Diagnóstico en consola [11]
+}
 });

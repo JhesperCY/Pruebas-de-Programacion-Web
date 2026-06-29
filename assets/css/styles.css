@@ -134,6 +134,13 @@
   font-weight: bold;
 }
 
+#resultado {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--color2);
+    display: none; /* Se mostrará solo al calcular */
+}
+
 /* ---------------------------- */
 /* Selectores de tipo etiqueta */
 /* ----------------------------*/
@@ -864,6 +871,18 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
     flex-direction: column;
     gap: 15px;
   }
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color4);
 }
 
 /*----------------------------------------------------------
