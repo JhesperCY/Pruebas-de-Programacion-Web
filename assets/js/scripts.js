@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollUpBtn.addEventListener('click', function(evento) {
             evento.preventDefault(); // Evita el salto brusco del href="#"
             
-            // Retorno suave al inicio de la página
+
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const pisos = document.getElementById("pisos").value;
     const divResultado = document.getElementById("resultado");
 
-    // 2. Validación básica [10]
     if (m2 <= 0 || m2 === "") {
         alert("Por favor, ingrese una cantidad válida de metros cuadrados.");
         return;
@@ -74,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const total = m2 * costoBaseM2 * pisos;
 
-    // 5. Mostrar resultado en el HTML [11]
     divResultado.style.display = "block";
     divResultado.innerHTML = `
         <p>Análisis de Presupuesto:</p>
