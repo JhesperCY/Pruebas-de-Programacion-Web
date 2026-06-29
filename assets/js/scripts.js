@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollUpBtn.addEventListener('click', function(evento) {
             evento.preventDefault(); // Evita el salto brusco del href="#"
             
-
+            // Retorno suave al inicio de la página
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -45,47 +45,54 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function calcularPresupuesto() {
-    const m2 = document.getElementById("metros").value;
-    const material = document.getElementById("material").value;
-    const pisos = document.getElementById("pisos").value;
+    // 1. Obtención de valores del formulario
+    const inputM2 = document.getElementById("metros").value;
+    const selectMaterial = document.getElementById("material").value;
+    const inputPisos = document.getElementById("pisos").value;
     const divResultado = document.getElementById("resultado");
 
-    if (m2 <= 0 || m2 === "") {
-        alert("Por favor, ingrese una cantidad válida de metros cuadrados.");
+    // 2. Validación de entrada (Operadores de comparación)
+    if (inputM2 <= 0 || inputM2 === "") {
+        alert("Por favor, ingrese un área válida en metros cuadrados.");
         return;
     }
 
-    let costoBaseM2;
-    
-    switch (material) {
+    // 3. Definición de costos base (Uso de variables y constantes)
+    let costoBase;
+
+    // Estructura Switch para determinar el costo según el material
+    switch (selectMaterial) {
         case "economico":
-            costoBaseM2 = 500;
+            costoBase = 500;
             break;
         case "premium":
-            costoBaseM2 = 900;
+            costoBase = 900;
             break;
         case "sostenible":
-            costoBaseM2 = 750;
+            costoBase = 750;
             break;
         default:
-            costoBaseM2 = 500;
+            costoBase = 500;
     }
 
-    const total = m2 * costoBaseM2 * pisos;
+    // 4. Operación matemática (Operadores aritméticos)
+    const totalEstimado = inputM2 * costoBase * inputPisos;
 
+    // 5. Salida de datos dinámica al HTML (Manipulación del DOM)
     divResultado.style.display = "block";
     divResultado.innerHTML = `
-        <p>Análisis de Presupuesto:</p>
-        <ul>
-            <li>Costo por m²: $${costoBaseM2}</li>
-            <li>Área total: ${m2} m²</li>
-            <li>Pisos: ${pisos}</li>
+        <p style="color: var(--color4);">Detalle de su Estimación:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Área: ${inputM2} m²</li>
+            <li>Costo m²: $${costoBase}</li>
+            <li>Pisos: ${inputPisos}</li>
         </ul>
         <hr>
-        <h3>Total Estimado: $${total.toLocaleString()}</h3>
-        <small>*Precios referenciales sujetos a evaluación técnica.</small>
+        <h3>Total: $${totalEstimado.toLocaleString()}</h3>
+        <small style="font-weight: normal;">*Precios referenciales basados en tarifas actuales.</small>
     `;
-    
-    console.log("Cálculo realizado: ", total); // Diagnóstico en consola [11]
+
+    // Diagnóstico en consola para depuración
+    console.log("Cálculo ejecutado correctamente. Total:", totalEstimado);
 }
 });

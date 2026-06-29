@@ -134,13 +134,6 @@
   font-weight: bold;
 }
 
-#resultado {
-    padding: 15px;
-    border-radius: 8px;
-    background-color: var(--color2);
-    display: none; /* Se mostrará solo al calcular */
-}
-
 /* ---------------------------- */
 /* Selectores de tipo etiqueta */
 /* ----------------------------*/
@@ -873,6 +866,20 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
   }
 }
 
+/*----------------------------------------------------------
+    DISEÑO RESPONSIVE PARA CELULAR PEQUEÑO (POSICION VERTICAL)
+    ----------------------------------------------------------*/
+
+@media(max-width: 480px) {
+  .nav-logo img {
+    height: 70px; /* Logo un poco más chico para no saturar la barra */
+  }
+  h1 {
+    font-size: 28px; /* Achicamos un poco el título del banner principal */
+  }
+}
+
+/* Estilos para el estimador */
 .form-group {
     margin-bottom: 15px;
     text-align: left;
@@ -885,15 +892,9 @@ alinear el contenido al centro y controlar la apariencia visual del banner */
     color: var(--color4);
 }
 
-/*----------------------------------------------------------
-    DISEÑO RESPONSIVE PARA CELULAR PEQUEÑO (POSICION VERTICAL)
-    ----------------------------------------------------------*/
-
-@media(max-width: 480px) {
-  .nav-logo img {
-    height: 70px; /* Logo un poco más chico para no saturar la barra */
-  }
-  h1 {
-    font-size: 28px; /* Achicamos un poco el título del banner principal */
-  }
+#resultado {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--color2); /* Color de fondo del demo */
+    display: none; /* Se muestra solo al realizar el cálculo */
 }

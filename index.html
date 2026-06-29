@@ -325,8 +325,7 @@
       </div>
     </section>
 
-    <!-- Formulario de Contacto -->
-    <section id="estimador" class="padding-xl">
+    <section id="cotizador" class="padding-xl">
       <div class="container">
         <h2>Cotizador de Construcción</h2>
         <p>Calcula un presupuesto estimado para tu proyecto de manera inmediata.</p>
@@ -334,13 +333,15 @@
         <div class="row">
           <div class="col card-container">
             <div class="card" style="padding: 20px;">
+              <!-- Entrada de metros cuadrados -->
               <div class="form-group">
-                <label>Metros Cuadrados (m²):</label>
+                <label for="metros">Metros Cuadrados (m²):</label>
                 <input type="number" id="metros" class="form-control" placeholder="Ej: 50" min="1">
               </div>
 
+              <!-- Selección de material (Unidad 3: condicionales) -->
               <div class="form-group">
-                <label>Material de Construcción:</label>
+                <label for="material">Calidad de Materiales:</label>
                 <select id="material" class="form-control">
                   <option value="economico">Económico (Ladrillo estándar)</option>
                   <option value="premium">Premium (Acabados de lujo)</option>
@@ -348,17 +349,20 @@
                 </select>
               </div>
 
+              <!-- Entrada de pisos -->
               <div class="form-group">
-                <label>Número de Pisos:</label>
+                <label for="pisos">Número de Pisos:</label>
                 <input type="number" id="pisos" class="form-control" value="1" min="1" max="5">
               </div>
 
-              <button class="form-submit" onclick="calcularPresupuesto()">
+              <!-- Botón que dispara la función global -->
+              <button class="form-submit" type="button" onclick="calcularPresupuesto()">
                 <i class="fa-solid fa-calculator"></i> Calcular Estimación
               </button>
 
+              <!-- Div para mostrar el resultado dinámico -->
               <div id="resultado" style="margin-top: 20px; font-weight: bold; color: var(--color1);">
-                <!-- Aquí aparecerá el resultado -->
+                <!-- Aquí JavaScript insertará el texto -->
               </div>
             </div>
           </div>
